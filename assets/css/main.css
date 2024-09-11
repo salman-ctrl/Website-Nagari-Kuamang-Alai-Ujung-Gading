@@ -314,6 +314,7 @@ h6 {
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+
   }
 
   .navmenu {
@@ -760,6 +761,7 @@ section,
   animation-delay: 0.8s;
   color: var(--surface-color);
   border: 2px solid var(--accent-color);
+  background: var(--accent-color);
 }
 
 .hero .btn-get-started:hover {
