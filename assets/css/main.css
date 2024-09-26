@@ -171,15 +171,15 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 32px;
+  max-height: 37px;
   margin-right: 8px;
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 25px;
   margin: 0;
   font-weight: 700;
-  color: var(--heading-color);
+  color: white;
 }
 
 .scrolled .header {
@@ -992,6 +992,186 @@ section,
   margin-bottom: 0;
 }
 
+
+
+/*--------------------------------------------------------------
+# section wali nagari dan bamus
+--------------------------------------------------------------*/
+/* Style default untuk PC */
+.container-img {
+  width: 500px; /* Lebar kontainer gambar */
+  height: auto; /* Tinggi otomatis untuk proporsi yang benar */
+  position: relative;
+  margin-right: 50px; /* Mengurangi margin agar lebih seimbang */
+  padding: 0;
+  display: flex;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  border: none;
+  overflow: hidden; /* Sembunyikan elemen yang melampaui */
+}
+
+.container-img img {
+  width: 100%; /* Lebar penuh dari kontainer */
+  height: auto; /* Tinggi otomatis agar proporsional */
+  object-fit: cover; /* Pastikan gambar terpotong dengan baik */
+  object-position: center; /* Pusatkan gambar */
+}
+
+.caption-img {
+  width: 100%; /* Lebar penuh untuk caption */
+  display: flex;
+  justify-content: center; /* Pusatkan teks caption */
+  z-index: 1; /* Pastikan caption di atas gambar */
+  background-color: rgba(0, 0, 0, 0.4); /* Latar belakang semi-transparan */
+  position: absolute; /* Agar tetap di bawah gambar */
+  bottom: 0; /* Posisikan di bawah gambar */
+  height: 70px; /* Tinggi tetap untuk caption */
+  padding: 15px; /* Ruang dalam untuk caption */
+  text-align: center; /* Pusatkan teks */
+  flex-direction: column; /* Susun teks dalam kolom */
+  align-items: center; /* Pusatkan konten di dalam caption */
+}
+
+.caption-img h3 {
+  color: #f8f9fa; /* Warna teks judul */
+  font-weight: 700; /* Tebal */
+  margin: 0; /* Hapus margin */
+}
+
+.caption-img h5 {
+  color: rgba(255, 255, 255, 0.7); /* Warna teks subjudul */
+  margin: 0; /* Hapus margin */
+}
+
+/* Responsif untuk tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container-wrapper {
+    display: flex;
+    flex-direction: column; /* Susun konten dalam satu kolom */
+    align-items: center; /* Pusatkan konten */
+    padding: 20px;
+  }
+
+  .container-img {
+    width: 90%; /* Menggunakan 90% lebar agar tidak terlalu lebar */
+    max-width: 500px; /* Batas lebar maksimum */
+    height: auto; /* Tinggi otomatis untuk proporsi yang benar */
+    position: relative;
+    margin-bottom: 20px; /* Jarak antar gambar */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    overflow: hidden; /* Menyembunyikan elemen yang melampaui */
+  }
+
+  .container-img img {
+    width: 100%; /* Lebar penuh dari kontainer */
+    height: auto; /* Tinggi otomatis agar proporsional */
+    object-fit: cover; /* Pastikan gambar terpotong dengan baik */
+    object-position: center; /* Pusatkan gambar */
+    display: block; /* Pastikan gambar tidak memiliki margin ekstra */
+  }
+
+  .caption-img {
+    width: 100%; /* Lebar penuh untuk caption */
+    padding: 15px; /* Ruang dalam untuk caption */
+    text-align: center; /* Pusatkan teks */
+    background-color: rgba(0, 0, 0, 0.6); /* Warna latar belakang semi-transparan */
+    position: absolute; /* Agar tetap di bawah gambar */
+    bottom: 0; /* Posisikan di bawah gambar */
+  }
+
+  .caption-img h3 {
+    color: #f8f9fa; /* Warna teks judul */
+    font-weight: 700; /* Tebal */
+    margin: 0; /* Hapus margin */
+  }
+
+  .caption-img h5 {
+    color: rgba(255, 255, 255, 0.8); /* Warna teks subjudul */
+    margin: 0; /* Hapus margin */
+  }
+}
+
+
+/* Responsif untuk HP (max-width: 767px) */
+@media (max-width: 767px) {
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .container-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Susun elemen dalam kolom pada HP */
+    min-height: 100vh;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .container-img {
+    width: 100%;
+    height: 250px; /* Lebih kecil untuk HP */
+    margin-bottom: 15px;
+  }
+
+  .container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar selalu penuh */
+    object-position: center;
+  }
+
+  .caption-img {
+    height: auto;
+    padding: 15px;
+    width: 100%;
+    text-align: center; /* Pusatkan teks */
+  }
+
+  .caption-img h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .caption-img h5 {
+    font-size: 14px;
+    margin-top: 0;
+  }
+}
+
+/* Tambahan styling umum */
+.container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container-img img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.caption-img {
+  text-align: center;
+  padding: 10px;
+}
+
+.caption-img h3, .caption-img h5 {
+  margin: 0;
+  padding: 0;
+}
+
+
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -1050,6 +1230,8 @@ section,
   /* Posisikan secara vertikal di tengah */
   overflow: hidden;
 }
+
+
 
 .services .service-item .icon {
   flex-shrink: 0;
